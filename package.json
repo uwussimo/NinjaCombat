@@ -5,7 +5,7 @@
   "author": "Uwussimo Robinson",
   "license": "MIT",
   "scripts": {
-    "bundle": "webpack"
+    "build": "webpack"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
