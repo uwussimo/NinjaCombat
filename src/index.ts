@@ -1,7 +1,3 @@
-class Helper {
-  public static getSomething(): string {
-    return 'something';
-  }
-}
-
-document.body.innerHTML = Helper.getSomething();
+//import scss
+import './styles/main.css';
+document.body.innerHTML = '<h1>Hello World</h1>';

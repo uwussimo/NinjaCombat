@@ -8,6 +8,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
@@ -23,7 +27,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: 'game.js',
     path: path.resolve(__dirname, 'dist'),
+    filename: 'game.js',
   },
 };
