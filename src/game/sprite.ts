@@ -25,13 +25,13 @@ class Sprite {
   }
 
   draw = () => {
-    this.ctx.fillStyle = 'white';
+    this.ctx.fillStyle = 'white'; // setting the color of the sprite
     this.ctx.fillRect(
       this.position.x,
       this.position.y,
       this.width,
       this.height
-    );
+    ); // drawing the sprite
   };
 
   update = () => {
@@ -46,6 +46,32 @@ class Sprite {
     } else {
       this.velocity.y += gravity;
     }
+  };
+
+  keyboardController = ({ arrowUp, arrowDown, arrowLeft, arrowRight }: any) => {
+    window.addEventListener('keydown', (e) => {
+      console.log(e.key);
+      switch (e.key) {
+        case arrowUp:
+          this.velocity.y = -10;
+          break;
+        case arrowDown:
+          this.velocity.y = 10;
+          break;
+        case arrowLeft:
+          this.velocity.x = -10;
+          break;
+        case arrowRight:
+          this.velocity.x = 10;
+          break;
+        default:
+          break;
+      }
+      setTimeout(() => {
+        this.velocity.y = 0;
+        this.velocity.x = 0;
+      }, 200);
+    });
   };
 }
 
