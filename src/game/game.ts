@@ -14,7 +14,7 @@ class Game {
     this.root.appendChild(this.gameCanvas);
   }
   init = () => {
-    this.gameCanvas.style.border = '4px dashed white';
+    this.gameCanvas.style.border = '4px solid white';
     this.gameCanvas.width = document.body.clientWidth - 20;
     this.gameCanvas.height = document.body.clientHeight - 20;
     this.ctx.fillRect(0, 0, this.gameCanvas.width, this.gameCanvas.height);
