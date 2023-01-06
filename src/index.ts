@@ -7,7 +7,7 @@ game.init();
 const warior1 = new Sprite({
   name: 'Scooty',
   position: { x: 30, y: 0 },
-  velocity: { x: 0, y: 12 },
+  velocity: { x: 0, y: 0 },
 });
 warior1.draw();
 console.log(warior1);
@@ -18,7 +18,7 @@ const warior2 = new Sprite({
     x: document.body.clientWidth - 100,
     y: 0,
   },
-  velocity: { x: 0, y: 10 },
+  velocity: { x: 0, y: 0 },
 });
 warior2.draw();
 console.log(warior2);

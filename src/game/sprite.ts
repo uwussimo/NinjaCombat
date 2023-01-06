@@ -1,3 +1,4 @@
+const gravity = 0.2;
 class Sprite {
   name: string;
   height: number;
@@ -37,11 +38,13 @@ class Sprite {
     this.draw();
     this.position.y += this.velocity.y;
     this.position.x += this.velocity.x;
-    if (this.position.y > document.body.clientHeight - this.height) {
-      this.velocity.y = -this.velocity.y;
-    }
-    if (this.position.y < 0) {
-      this.velocity.y = -this.velocity.y;
+    if (
+      this.position.y + this.height + this.velocity.y >=
+      document.body.clientHeight - 20
+    ) {
+      this.velocity.y = 0;
+    } else {
+      this.velocity.y += gravity;
     }
   };
 }
