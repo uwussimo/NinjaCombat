@@ -8,7 +8,7 @@
     "start": "yarn bundle && npm-run-all --parallel watch serve",
     "bundle": "webpack",
     "watch": "webpack --watch",
-    "serve": "cd ./dist && live-server"
+    "serve": "cd ./dist && live-server --port=8080 --entry-file=index.html"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
