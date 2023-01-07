@@ -25,7 +25,7 @@ class Sprite {
   }
 
   draw = () => {
-    this.ctx.fillStyle = 'white'; // setting the color of the sprite
+    this.ctx.fillStyle = '#b897ff'; // setting the color of the sprite
     this.ctx.fillRect(
       this.position.x,
       this.position.y,

@@ -7,7 +7,7 @@ game.init();
 const warior1 = new Sprite({
   name: 'Scooty',
   position: { x: 30, y: 0 },
-  velocity: { x: 0, y: 0 },
+  velocity: { x: 0, y: 5 },
 });
 warior1.keyboardController({
   arrowUp: 'w',
@@ -22,7 +22,7 @@ const warior2 = new Sprite({
     x: document.body.clientWidth - 100,
     y: 0,
   },
-  velocity: { x: 0, y: 0 },
+  velocity: { x: 0, y: 5 },
 });
 warior2.keyboardController({
   arrowUp: 'ArrowUp',
